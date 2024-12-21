@@ -1,0 +1,220 @@
+/* Ensure the entire body has a smooth background and margin */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+   
+}
+
+/* Banner Image with Dark Overlay */
+.topbnr {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    background-image: url('assets/bg1920.jpg'); /* Your banner image */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Dark overlay using pseudo-element */
+.topbnr::before {
+    content: ''; /* Create an empty content box */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 76, 0.144); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure overlay is above the image but below the text */
+}
+
+/* Container Styling */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: white; /* White text for contrast on dark banner */
+    z-index: 2; /* Ensure text appears above the dark overlay */
+}
+
+/* Hero Section Styling */
+.hero h1 {
+    font-size: 3em; /* Large font for the title */
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Text shadow for better readability */
+}
+
+.hero p {
+    font-size: 1.5em; /* Smaller font for the description */
+    margin: 10px 0 0 0;
+    padding: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Optional: Text shadow for better readability */
+}
+
+/* Optional responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em; /* Smaller title on smaller screens */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Smaller paragraph text on small screens */
+    }
+}
+.button-87 {
+    padding: 12px 50px;
+    text-align: center;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-weight: 700;
+    background-color: rgb(84, 3, 138);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-87:hover {
+    background-color: #333;
+}
+
+.button-87:active {
+    transform: scale(0.95);
+}
+
+
+
+
+.lnkorder{
+    margin-top: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.about {
+    text-align: center;
+    width: 80%; /* Adjust the container width */
+    max-width: 1200px; /* Maximum width */
+    margin: 30px auto; /* Centers the container horizontally with some margin */
+    padding: 20px; /* Adds space inside the container */
+    background-color: #fff; /* White background for the container */
+    border-radius: 10px; /* Rounds the corners of the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.253), 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds shadows */
+    transition: transform 0.2s ease-in-out;
+}
+
+.about:hover{
+    transform: scale(1.02);
+    
+
+}
+
+.about h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 16px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+.secbr{
+    text-align: center;
+    justify-content: center;
+}
+.secbg {
+    display: flex; /* Use flexbox for the row layout */
+    justify-content: center; /* Evenly distribute the items (boxes) */
+    gap: 20px; /* Add some space between the boxes */
+    margin: 20px 0;
+    flex-wrap: wrap; /* Allow the items to wrap onto a new line if needed */
+}
+
+.secbg > div {
+    background-color: #fff; /* White background for each box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px;
+    text-align: center; /* Center the content */
+    width: 25%; /* Default to 30% width for large screens */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    transform: scale(0.95); /* Initially scale the item slightly smaller */
+    transition: transform 0.3s ease-out;
+}
+
+.secbg > div:hover{
+    transform: scale(1);
+
+}
+
+.secbg img {
+    width: 20%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+    margin-bottom: 15px;
+}
+
+.secbg h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.secbg p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}
+
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .secbg {
+        justify-content: center; /* Center items on small screens */
+    }
+
+    .secbg > div {
+        width: 70%; /* Each item will take up full width */
+        margin-bottom: 20px; /* Space between stacked items */
+    }
+}
+/* Sticky Header */
+.sticky-top {
+    position: fixed; /* Fix the header at the top of the page */
+    top: -100px; /* Initially hide the header above the viewport */
+    left: 0;
+    width: 100%;
+    background-color: rgb(131, 0, 131); /* Violet background */
+    color: white;
+    padding: 5px 0;
+    text-align: left;
+    font-size: px;
+    font-weight: bold;
+    transition: top 0.3s ease; /* Smooth transition for the "top" property */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.sticky-top.visible {
+    top: 0; /* When visible, position it at the top of the screen */
+}
+
+.sticky-top h1 {
+    font-size: 30px; /* Bold and larger title */
+    margin-top: 5px;
+    margin-left: 19px;
+}
+
+.sticky-top p {
+    font-size: 16px; /* Subtext size */
+    margin-left: 19px;
+    margin-top: 0;
+}
+
+/* Ensure the body has enough space for the sticky header */
